@@ -1,0 +1,28 @@
+
+@import 'variables';
+
+@import 'normalize.css';
+@import 'skeleton.css';
+
+html {
+  font-size: $root-font-size;
+  font-family: $font-family;
+  max-width: $page-width;
+  margin: 0 auto;
+  text-align: center;
+}
+
+p {
+  font-size: $paragraph-font-size;
+}
+
+.justified {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section {
+  margin: 2rem 0rem;
+  border: 10px #fafafa solid;
+  padding: 2rem;
+}

@@ -1,0 +1,48 @@
+{
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc"]
+  },
+  "source": {
+    "include": ["src", "package.json", "README.md"],
+    "includePattern": ".js$",
+    "excludePattern": "(node_modules/|docs|dist)"
+  },
+  "destination": "./docs",
+  "plugins": [
+    { "name": "esdoc-ecmascript-proposal-plugin", "option": { "all": true } },
+    {
+      "name": "esdoc-standard-plugin",
+      "option": {
+        "lint": {"enable": true},
+        "coverage": {"enable": true},
+        "accessor": {"access": ["public", "protected", "private"], "autoPrivate": true},
+        "undocumentIdentifier": {"enable": true},
+        "unexportedIdentifier": {"enable": false},
+        "typeInference": {"enable": true},
+        "brand": {
+          "logo": "./assets/images/daoed-wordmark.png",
+          "title": "Daoed helper library",
+          "description": "BlockStack API helper library that works in browser, node and native",
+          "repository": "https://github.com/DAOed/daoed.github.io",
+          "site": "https://daoed.github.io/daoed",
+          "author": "https://about.daoed.com",
+          "image": "https://about.daoed.com/img/daoed-logo.png"
+        },
+      }
+    }
+  ],
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": true,
+    "useLongnameInNav": false,
+    "showInheritedInNav": true
+  },
+  "opts": {
+    "destination": "./docs/",
+    "encoding": "utf8",
+    "private": true,
+    "recurse": true,
+    "template": "./node_modules/minami"
+  }
+}
