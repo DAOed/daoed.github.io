@@ -1,6 +1,6 @@
 {
   "name": "daoed",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "BlockStack API helper library that works in browser, node and native",
   "main": "./dist/index.js",
   "scripts": {
