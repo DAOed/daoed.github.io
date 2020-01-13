@@ -24,7 +24,7 @@ While originally developed for use in *DAOed* dapps, other *BlockStack* dapps mi
 
 ## Documentation
 
-[https://daoed.github.io/daoed](https://daoed.github.io/daoed)
+[https://daoed.github.io/docs](https://daoed.github.io/docs)
 
 
 ## Contributing
