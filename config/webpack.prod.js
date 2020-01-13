@@ -17,6 +17,7 @@ module.exports = merge(common, {
     quality: paths.src + "/quality",
     schema: paths.src + "/schema",
     search: paths.src + "/search",
+    index: paths.root + "/index",
   },
   output: {
     filename: 'daoed.min.js',

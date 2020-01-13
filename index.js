@@ -1,17 +1,13 @@
-'use strict'
 
-var Cast = require('./dist/cast')
-var Health = require('./dist/health')
-var Load = require('./dist/load')
-var Quality = require('./dist/quality')
-var Schema = require('./dist/schema')
-var Search = require('./dist/search')
+import Cast from "./src/cast"
+import Health from "./src/health"
+import Load from "./src/load"
+import Quality from "./src/quality"
+import Schema from "./src/schema"
+import Search from "./src/search"
 
-module.exports = {
-  Cast: Cast,
-  Health: Health,
-  Load: Load,
-  Quality: Quality,
-  Schema: Schema,
-  Search: Search,
+const lib = { Cast, Health, Load, Quality, Schema, Search }
+
+export {
+  lib as default, Cast, Health, Load, Quality, Schema, Search
 }
