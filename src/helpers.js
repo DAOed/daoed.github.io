@@ -8,7 +8,8 @@ export const client = {
     try {
       const result = await axios.get(url);
       return result.data;
-    } catch {
+    } catch (err) {
+      console.log(err);
       return null;
     }
   },
@@ -16,7 +17,8 @@ export const client = {
     try {
       const result = await axios.post(url, params);
       return result.data;
-    } catch {
+    } catch (err) {
+      console.log(err);
       return null;
     }
   }

@@ -2,14 +2,7 @@
 import { baseBlockstackApi } from "./constants";
 import { client } from "./helpers";
 
-const apiHealth = (apiBase = baseBlockstackApi) => {
-  try {
-    return client.get(`${apiBase}/node/ping`);
-  } catch (err) {
-    console.log(err);
-    return [];
-  }
-};
+const apiHealth = (apiBase = baseBlockstackApi) => client.get(`${apiBase}/node/ping`);
 
 const Health = { api: apiHealth };
 

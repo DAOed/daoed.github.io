@@ -2,14 +2,8 @@
 import { baseBlockstackApi } from "./constants";
 import { client } from "./helpers";
 
-const searchAccounts = (account, apiBase = baseBlockstackApi) => {
-  try {
-    return client.get(`${apiBase}/search?query=${account.toLowerCase().trim()}`);
-  } catch (err) {
-    console.log(err);
-    return null;
-  }
-};
+const searchAccounts = (account, apiBase = baseBlockstackApi) =>
+  client.get(`${apiBase}/search?query=${account.toLowerCase().trim()}`);
 
 const Search = { accounts: searchAccounts };
 
