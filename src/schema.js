@@ -1,30 +1,30 @@
 
-import { algorithmWeigth, socialWeigth, constantWeigths } from "./constants"
+import { algorithmWeigth, socialWeigth, constantWeigths } from "./constants";
 
-import { initialsAvatar } from "./helpers"
+import { initialsAvatar } from "./helpers";
 
 const schemaOne = (data) => {
-  if (!data.fullyQualifiedName) data.fullyQualifiedName = data.username
+  if (!data.fullyQualifiedName) data.fullyQualifiedName = data.username;
 
-  const profile = data.profile
-  const account = profile.account || []
+  const profile = data.profile;
+  const account = profile.account || [];
 
-  profile.address = profile.address || {}
-  profile.image = profile.image || []
+  profile.address = profile.address || {};
+  profile.image = profile.image || [];
 
-  const avatar = profile.image.find((img) => img.name === "avatar") || {}
-  const cover = profile.image.find((img) => img.name === "cover") || {}
+  const avatar = profile.image.find((img) => img.name === "avatar") || {};
+  const cover = profile.image.find((img) => img.name === "cover") || {};
 
-  const facebook = account.find((acc) => acc.service === "facebook") || {}
-  const twitter = account.find((acc) => acc.service === "twitter") || {}
-  const linkedin = account.find((acc) => acc.service === "linkedin") || {}
-  const github = account.find((acc) => acc.service === "github") || {}
-  const steem = account.find((acc) => acc.service === "steem") || {}
+  const facebook = account.find((acc) => acc.service === "facebook") || {};
+  const twitter = account.find((acc) => acc.service === "twitter") || {};
+  const linkedin = account.find((acc) => acc.service === "linkedin") || {};
+  const github = account.find((acc) => acc.service === "github") || {};
+  const steem = account.find((acc) => acc.service === "steem") || {};
 
-  const bitcoin = account.find((acc) => acc.service === "bitcoin") || {}
-  const ethereum = account.find((acc) => acc.service === "ethereum") || {}
+  const bitcoin = account.find((acc) => acc.service === "bitcoin") || {};
+  const ethereum = account.find((acc) => acc.service === "ethereum") || {};
 
-  const website = (data.website || []).find((site) => site["@WebSite"] === "Website") || {}
+  const website = (data.website || []).find((site) => site["@WebSite"] === "Website") || {};
 
   return {
     profile: {
@@ -55,15 +55,15 @@ const schemaOne = (data) => {
     },
     apps: profile.apps,
     api: profile.api
-  }
-}
+  };
+};
 
 const schemaAll = (data) => {
-  return data.map(schemaOne)
-}
+  return data.map(schemaOne);
+};
 
-const Schema = { one: schemaOne, all: schemaAll }
+const Schema = { one: schemaOne, all: schemaAll };
 
 export {
   Schema as default, schemaOne, schemaAll
-}
+};

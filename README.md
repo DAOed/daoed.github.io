@@ -3,7 +3,7 @@
 This library contains [BlockStack API](https://core.blockstack.org/) helper functions used in DAOed dapps.
 
 While originally developed for use in *DAOed* dapps, other *BlockStack* dapps might this library handy as it is:
-* lightweight with no deps
+* lightweight
 * comes with useful features not found in the official *BlockStack* JS library
 * works in the browser, node.js and native(react-native, vue-native, ...)
 * well documented

@@ -1,13 +1,13 @@
 
-import Cast from "./src/cast"
-import Health from "./src/health"
-import Load from "./src/load"
-import Quality from "./src/quality"
-import Schema from "./src/schema"
-import Search from "./src/search"
+import Cast from "./src/cast";
+import Health from "./src/health";
+import Load from "./src/load";
+import Quality from "./src/quality";
+import Schema from "./src/schema";
+import Search from "./src/search";
 
-const lib = { Cast, Health, Load, Quality, Schema, Search }
+const lib = { Cast, Health, Load, Quality, Schema, Search };
 
 export {
   lib as default, Cast, Health, Load, Quality, Schema, Search
-}
+};

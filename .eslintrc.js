@@ -10,7 +10,7 @@ module.exports = {
     "no-unused-vars": 0,
     "no-console": 0,
     "indent": [2, 2],
-    "semi": "error",
+    "semi": [1, "always"],
     "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 1, "maxEOF": 1 }],
     "no-console": 0,
     "quotes": [2, "double", {"avoidEscape": true}]
