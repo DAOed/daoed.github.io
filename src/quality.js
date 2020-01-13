@@ -35,7 +35,7 @@ const filterQuality = (data, type, config) => {
   }
 };
 
-const sortQuality = function (data) {
+const rankQuality = function (data) {
   return data.sort(function (item1, item2) {
     const img1 = item1.profile.avatar || "";
     const img2 = item2.profile.avatar || "";
@@ -46,23 +46,23 @@ const sortQuality = function (data) {
     const bio1 = item1.profile.description || "";
     const bio2 = item2.profile.description || "";
 
-    // sort by avatar
+    // rank by avatar
     if (img1.length < img2.length) return 1;
     if (img1.length > img2.length) return -1;
 
-    // sort by name
+    // rank by name
     if (name1.length < name2.length) return 1;
     if (name1.length > name2.length) return -1;
 
-    // sort by description
+    // rank by description
     if (bio1.length < bio2.length) return 1;
     if (bio1.length > bio2.length) return -1;
   });
 };
 
-const Quality = { filter: filterQuality, sort: sortQuality };
+const Quality = { filter: filterQuality, rank: rankQuality };
 
 export {
-  Quality as default, filterQuality, sortQuality
+  Quality as default, filterQuality, rankQuality
 };
 

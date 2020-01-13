@@ -29,8 +29,8 @@ async function testSearch () {
   console.log("showing casted/schemed search results for *dan*: ", casted);
 
   // test Quality
-  const sorted = Quality.sort(casted);
-  console.log("showing sorted casted search result for *dan*: ", sorted);
+  const ranked = Quality.rank(casted);
+  console.log("showing ranked casted search result for *dan*: ", ranked);
 
   // test Health
   const apiHealth = await Health.api();
