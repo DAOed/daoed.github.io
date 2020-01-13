@@ -8,7 +8,6 @@
     "includePattern": ".js$",
     "excludePattern": "(node_modules/|docs|dist)"
   },
-  "destination": "./docs",
   "plugins": [
     { "name": "esdoc-ecmascript-proposal-plugin", "option": { "all": true } },
     {
@@ -39,7 +38,7 @@
     "showInheritedInNav": true
   },
   "opts": {
-    "destination": "./docs/",
+    "destination": "./docs",
     "encoding": "utf8",
     "private": true,
     "recurse": true,

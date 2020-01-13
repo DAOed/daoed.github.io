@@ -7,7 +7,7 @@
     "start": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
     "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose",
-    "docs": "./node_modules/.bin/jsdoc ./src",
+    "docs": "./node_modules/.bin/jsdoc ./src  -d docs",
     "pub": "npm version minor --force -m \"version %s\"",
     "patch": "npm version patch --force -m \"version %s\"",
     "preversion": "npm run docs",
