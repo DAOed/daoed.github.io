@@ -283,72 +283,424 @@
 </div>
 
     <div class="main">
-        <h1 class="page-title" data-filename="index.html">Index</h1>
+        <h1 class="page-title" data-filename="module-Quality.html">Module: Quality</h1>
         
 
 
+
+<section>
+
+<header>
+    <h2>
+    Quality
+    </h2>
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+
+    
+        
+            <div class="description"><p>Quality module is for filtering and ranking search results based on how much profile meta data they have available</p></div>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="~filterQuality">
+            
+            <span class="type-signature ">inner</span>filterQuality<span class="signature">(data, type, config)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{array}</span>
+        </h4>
+
+        
+        <div class="tag-source">
+            quality.js, line 6
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>account data objects to cast/scheme</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>valid types are <code>quality</code> and <code>domain</code></p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>config</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+|
+
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>when <code>type</code> is <code>quality</code> is <code>array</code> with values: <code>['name', 'bio', 'avatar', 'accounts']</code>, else is string of domain extensions to filter for <code>.id.blockstack/id.blockstack .id.onename</code></p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
     
 
 
-    <h3>daoed 0.1.1</h3>
-
-
-
-
-
-
-
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                        array
+                        
+                    
+            </td>
+            <td class="description last">returns array of account data objects filtered according to <code>type</code> and <code>config</code> params</td>
+        </tr>
+    
+    </tbody>
+</table>
 
 
     
 
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="~rankQuality">
+            
+            <span class="type-signature ">inner</span>rankQuality<span class="signature">(data)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{array}</span>
+        </h4>
+
+        
+        <div class="tag-source">
+            quality.js, line 49
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
 
 
 
-    <section>
-        <article class="readme"><h1>DAOed BlockStack API helper library</h1>
-<p>This library contains <a target='_blank' href="https://core.blockstack.org/">BlockStack API</a> helper functions used in DAOed dapps.</p>
-<p>While originally developed for use in <em>DAOed</em> dapps, other <em>BlockStack</em> dapps might this library handy as it is:</p>
-<ul>
-<li>lightweight</li>
-<li>comes with useful features not found in the official <em>BlockStack</em> JS library</li>
-<li>works in the browser, node.js and native(react-native, vue-native, ...)</li>
-<li>well documented</li>
-<li>well maintained and actively used on our BlockStack dapps</li>
-<li>tested(manually) - automated tests coming soon</li>
-</ul>
-<h2>Installation</h2>
-<h3>Node</h3>
-<p><code>yarn add daoed</code></p>
-<h3>Browser</h3>
-<p><code>&lt;script src=&quot;https://unpkg.com/daoed&quot;&gt;&lt;/script&gt;</code></p>
-<h2>Documentation</h2>
-<p><a target='_blank' href="https://daoed.github.io/docs">https://daoed.github.io/docs</a></p>
-<h2>Contributing</h2>
-<h3>Set up</h3>
-<ul>
-<li>Clone the repo: <code>https://github.com/DAOed/daoed.github.io</code></li>
-<li>Change into the repo directory: <code>cd daoed</code></li>
-<li>Install deps: <code>yarn install</code></li>
-<li>Start dev server: <code>yarn start</code></li>
-</ul>
-<h3>New feature</h3>
-<ul>
-<li>Open an issue to discuss the new feature</li>
-<li>Upon receiving approval from any of <em>DAOed</em>'s members, follow the steps below</li>
-</ul>
-<h3>Bug, issue or fix</h3>
-<ul>
-<li>Fork the repo: <code>https://github.com/DAOed/daoed.github.io</code></li>
-<li>Clone your fork locally</li>
-<li>Create your feature/fix branch on your locally cloned repo</li>
-<li>Commit changes to the feature/fix branch of your local repo</li>
-<li>Push changes to the feature/fixes branch of your Github forked repo</li>
-<li>Create a Pull Request from your repo(the feature/fix) branch to this repo</li>
-</ul></article>
-    </section>
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>array of casted/schemed account data objects</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
 
 
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                        array
+                        
+                    
+            </td>
+            <td class="description last">returns array of casted/schemed account data objects ranked for based on whether has most or least of these: <code>avatar</code>, <code>name</code>, <code>bio</code></td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

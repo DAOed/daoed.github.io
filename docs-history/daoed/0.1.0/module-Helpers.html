@@ -283,72 +283,620 @@
 </div>
 
     <div class="main">
-        <h1 class="page-title" data-filename="index.html">Index</h1>
+        <h1 class="page-title" data-filename="module-Helpers.html">Module: Helpers</h1>
         
 
 
+
+<section>
+
+<header>
+    <h2>
+    Helpers
+    </h2>
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+
+    
+        
+            <div class="description"><p>Helpers module is a set of utilities</p></div>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="~addHistory">
+            
+            <span class="type-signature ">inner</span>addHistory<span class="signature">(newHistoryItem, historyItems)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{array}</span>
+        </h4>
+
+        
+        <div class="tag-source">
+            helpers.js, line 30
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>newHistoryItem</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>The new history item to add</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>historyItems</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>Existing history items</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><code>historySize</code> for default history size</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
     
 
 
-    <h3>daoed 0.1.1</h3>
-
-
-
-
-
-
-
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                        array
+                        
+                    
+            </td>
+            <td class="description last">returns history items trimmed to their max size with the new item appended</td>
+        </tr>
+    
+    </tbody>
+</table>
 
 
     
 
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="~filer">
+            
+            <span class="type-signature ">inner</span>filer<span class="signature">(name, prefix)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{string}</span>
+        </h4>
+
+        
+        <div class="tag-source">
+            helpers.js, line 49
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
 
 
 
-    <section>
-        <article class="readme"><h1>DAOed BlockStack API helper library</h1>
-<p>This library contains <a target='_blank' href="https://core.blockstack.org/">BlockStack API</a> helper functions used in DAOed dapps.</p>
-<p>While originally developed for use in <em>DAOed</em> dapps, other <em>BlockStack</em> dapps might this library handy as it is:</p>
-<ul>
-<li>lightweight</li>
-<li>comes with useful features not found in the official <em>BlockStack</em> JS library</li>
-<li>works in the browser, node.js and native(react-native, vue-native, ...)</li>
-<li>well documented</li>
-<li>well maintained and actively used on our BlockStack dapps</li>
-<li>tested(manually) - automated tests coming soon</li>
-</ul>
-<h2>Installation</h2>
-<h3>Node</h3>
-<p><code>yarn add daoed</code></p>
-<h3>Browser</h3>
-<p><code>&lt;script src=&quot;https://unpkg.com/daoed&quot;&gt;&lt;/script&gt;</code></p>
-<h2>Documentation</h2>
-<p><a target='_blank' href="https://daoed.github.io/docs">https://daoed.github.io/docs</a></p>
-<h2>Contributing</h2>
-<h3>Set up</h3>
-<ul>
-<li>Clone the repo: <code>https://github.com/DAOed/daoed.github.io</code></li>
-<li>Change into the repo directory: <code>cd daoed</code></li>
-<li>Install deps: <code>yarn install</code></li>
-<li>Start dev server: <code>yarn start</code></li>
-</ul>
-<h3>New feature</h3>
-<ul>
-<li>Open an issue to discuss the new feature</li>
-<li>Upon receiving approval from any of <em>DAOed</em>'s members, follow the steps below</li>
-</ul>
-<h3>Bug, issue or fix</h3>
-<ul>
-<li>Fork the repo: <code>https://github.com/DAOed/daoed.github.io</code></li>
-<li>Clone your fork locally</li>
-<li>Create your feature/fix branch on your locally cloned repo</li>
-<li>Commit changes to the feature/fix branch of your local repo</li>
-<li>Push changes to the feature/fixes branch of your Github forked repo</li>
-<li>Create a Pull Request from your repo(the feature/fix) branch to this repo</li>
-</ul></article>
-    </section>
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>Path to prefix</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>prefix</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
 
 
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>Prefix</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                        string
+                        
+                    
+            </td>
+            <td class="description last">returns path with prefix applied</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    <div class="nameContainer">
+        <h4 class="name" id="~initialsAvatar">
+            
+            <span class="type-signature ">inner</span>initialsAvatar<span class="signature">(name, colors, size)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{object}</span>
+        </h4>
+
+        
+        <div class="tag-source">
+            helpers.js, line 57
+        </div>
+        
+    </div>
+
+    
+</dt>
+<dd>
+
+    
+
+    
+
+    
+
+    
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>full name or username to generate avatar initials from</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>colors</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>color palette to use. See <code>defaultAvatarColors</code> for default</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>size</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            <td class="description last">
+                
+                <p>size of avatar. See <code>avatarSize</code> for default</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Type</th>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+            
+            <td class="type">
+            
+                        object
+                        
+                    
+            </td>
+            <td class="description last">returns <code>{content, style}</code>, where content is string of initials and style is style of avatar</td>
+        </tr>
+    
+    </tbody>
+</table>
+
+
+    
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 
