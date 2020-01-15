@@ -1,8 +1,8 @@
 {
   "name": "daoed",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "BlockStack API helper library that works in browser, node and native",
-  "main": "./dist/index.js",
+  "main": "./dist/daoed.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
@@ -10,9 +10,6 @@
     "copydocs": "node move",
     "pub": "npm version minor --force -m \"version %s\"",
     "patch": "npm version patch --force -m \"version %s\"",
-    "preversion": "npm run docs",
-    "version": "git add -A",
-    "postversion": "npm publish && git push",
     "lintfix": "./node_modules/.bin/eslint index.js src/ --fix",
     "ready": "npm run lintfix && npm run build && npm run docs",
     "up:patch": "npm run ready && npm version patch --force -m \"version %s\" && git add -A && git push && npm publish",
