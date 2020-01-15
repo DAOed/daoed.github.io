@@ -11,9 +11,16 @@ config.gypi
 CVS
 npm-debug.log
 move.js
+.babelrc
+LICENSE
+.eslintrc.js
+postcss.config.js
+.jsdoc.json
+dist/index.html
 /docs
 /docs-history
 /public
 /src
 /config
 /theme
+/assets
