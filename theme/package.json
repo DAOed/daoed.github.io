@@ -1,0 +1,40 @@
+{
+  "name": "jaguarjs-jsdoc",
+  "version": "0.1.0",
+  "description": "Jaguar.js template for JSDoc 3",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "taffydb": "^2.7.2",
+    "underscore": "^1.7.0"
+  },
+  "devDependencies": {
+    "connect-livereload": "^0.6.1",
+    "grunt": "^1.0.4",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-connect": "^2.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-jsdoc": "^2.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mmig/jaguarjs-jsdoc.git"
+  },
+  "keywords": [
+    "jsdoc",
+    "jsdoc3",
+    "jaguar.js",
+    "template"
+  ],
+  "author": "russa",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/mmig/jaguarjs-jsdoc/issues"
+  }
+}

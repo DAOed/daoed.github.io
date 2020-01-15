@@ -5,12 +5,7 @@ import Load from "./load";
 import Quality from "./quality";
 import Schema from "./schema";
 import Search from "./search";
-
-const lib = { Cast, Health, Load, Quality, Schema, Search };
-
-export {
-  lib as default, Cast, Health, Load, Quality, Schema, Search
-};
+import Helpers from "./helpers";
 
 async function testSearch () {
   // test Search
@@ -35,6 +30,8 @@ async function testSearch () {
   // test Health
   const apiHealth = await Health.api();
   console.log("showing results for blockstack api status: ", apiHealth);
+
+  // test Helpers
 }
 
 testSearch();

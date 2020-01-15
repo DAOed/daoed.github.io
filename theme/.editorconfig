@@ -1,0 +1,23 @@
+
+root = true
+
+[*]
+charset = utf-8
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+end_of_line = lf
+
+[package.json]
+indent_style = space
+indent_size = 2
+
+[{**/*.js,**/*.css,**/*.json,**/*.tmpl}]
+indent_style = space
+indent_size = 4
+
+[*.{js,ts,css,less}]
+# C-style doc comments
+block_comment_start = /*
+block_comment = *
+block_comment_end = */

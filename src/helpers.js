@@ -1,9 +1,12 @@
-
-import { historySize, daoedPrefixer, defaultAvatarColors } from "./constants";
+/**
+* Helpers module is a set of utilities
+* @module Helpers
+*/
 
 import axios from "axios";
+import { historySize, defaultAvatarColors, avatarSize } from "./constants";
 
-export const client = {
+const client = {
   get: async (url) => {
     try {
       const result = await axios.get(url);
@@ -24,21 +27,41 @@ export const client = {
   }
 };
 
-export const addHistory = (value, array) => {
-  const len = array.length;
-  if (len < historySize) {
-    array.push(value);
-    return array;
+/**
+* @function addHistory
+* @param {string} newHistoryItem - The new history item to add
+* @param {array} historyItems - Existing history items
+* @see {@link historySize} for default history size
+* @returns {array} returns history items trimmed to their max size with the new item appended
+*/
+const addHistory = (newHistoryItem, historyItems, hSize = historySize) => {
+  const len = historyItems.length;
+  if (len < hSize) {
+    historyItems.push(newHistoryItem);
+    return historyItems;
   } else {
-    array.splice(historySize - 1);
-    array.push(value);
-    return array;
+    historyItems.splice(hSize - 1);
+    historyItems.push(newHistoryItem);
+    return historyItems;
   }
 };
 
-export const filer = name => `${daoedPrefixer}${name}`;
+/**
+* @function filer
+* @param {string} name - Path to prefix
+* @param {string} prefix - Prefix
+* @returns {string} returns path with prefix applied
+*/
+const filer = (name, prefix) => `${prefix}${name}`;
 
-export const initialsAvatar = (name, colors = defaultAvatarColors, size = "52px") => {
+/**
+* @function initialsAvatar
+* @param {string} name - full name or username to generate avatar initials from
+* @param {array} colors - color palette to use. See {@link defaultAvatarColors} for default
+* @param {string} size - size of avatar. See {@link avatarSize} for default
+* @returns {object} returns `{content, style}`, where content is string of initials and style is style of avatar
+*/
+const initialsAvatar = (name, colors = defaultAvatarColors, size = avatarSize) => {
   name = name.replace(/\s+/g, " ").trim();
 
   const nameSplit = name.split(" ");
@@ -75,4 +98,10 @@ export const initialsAvatar = (name, colors = defaultAvatarColors, size = "52px"
       fontSize: "30px"
     }
   };
+};
+
+const Helpers = { client, addHistory, filer, initialsAvatar };
+
+export {
+  Helpers as default, client, addHistory, filer, initialsAvatar
 };

@@ -1,8 +1,14 @@
+/**
+* Cast module is for casting raw accounts data objects into the scheme {@link schemaOne}
+* @module Cast
+*/
 
 import { filterQuality } from "./quality";
 import { schemaAll } from "./schema";
 
 /**
+* Casts accounts
+* @function castAccounts
 * @param {array} accs - Raw array of account data objects from a search
 * @param {object} settings - settings object
 * @returns {array} returns array of `schemed` account data sorted by `domain/quality` based on the `settings`

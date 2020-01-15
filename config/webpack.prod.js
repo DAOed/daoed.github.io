@@ -17,6 +17,7 @@ module.exports = merge(common, {
     quality: paths.src + "/quality",
     schema: paths.src + "/schema",
     search: paths.src + "/search",
+    helpers: paths.src + "/helpers",
     index: paths.root + "/index",
   },
   output: {

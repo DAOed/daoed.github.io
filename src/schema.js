@@ -1,12 +1,21 @@
+/**
+* Schema module casts an account data object into a more organized form
+* @module Schema
+*/
 
 import { algorithmWeigth, socialWeigth, constantWeigths } from "./constants";
-
 import { initialsAvatar } from "./helpers";
 
-const schemaOne = (data) => {
-  if (!data.fullyQualifiedName) data.fullyQualifiedName = data.username;
+/**
+* @async
+* @function schemaOne
+* @param {object} accountData - account data object to cast/scheme
+* @returns {object} returns account data object schemed/casted in the manner : {profile, social, details, apps, api}
+*/
+const schemaOne = (accountData) => {
+  if (!accountData.fullyQualifiedName) accountData.fullyQualifiedName = accountData.username;
 
-  const profile = data.profile;
+  const profile = accountData.profile;
   const account = profile.account || [];
 
   profile.address = profile.address || {};
@@ -24,7 +33,7 @@ const schemaOne = (data) => {
   const bitcoin = account.find((acc) => acc.service === "bitcoin") || {};
   const ethereum = account.find((acc) => acc.service === "ethereum") || {};
 
-  const website = (data.website || []).find((site) => site["@WebSite"] === "Website") || {};
+  const website = (accountData.website || []).find((site) => site["@WebSite"] === "Website") || {};
 
   return {
     profile: {
@@ -33,7 +42,7 @@ const schemaOne = (data) => {
       avatar: avatar.contentUrl,
       cover: cover.contentUrl,
       location: profile.address.addressLocality,
-      initialsAvatar: avatar.contentUrl ? {} : initialsAvatar(profile.name || data.fullyQualifiedName),
+      initialsAvatar: avatar.contentUrl ? {} : initialsAvatar(profile.name || accountData.fullyQualifiedName),
       website: website.url
     },
     social: {
@@ -45,11 +54,11 @@ const schemaOne = (data) => {
     },
     detail: {
       type: profile["@type"],
-      identifier: data.fullyQualifiedName.split(".")[0],
-      domain: data.fullyQualifiedName.substring(data.fullyQualifiedName.indexOf(".") + 1),
-      username: data.username,
-      id: data.fullyQualifiedName,
-      gaia: data.profile && data.profile.api ? new URL(data.profile.api.gaiaHubUrl).hostname : "",
+      identifier: accountData.fullyQualifiedName.split(".")[0],
+      domain: accountData.fullyQualifiedName.substring(accountData.fullyQualifiedName.indexOf(".") + 1),
+      username: accountData.username,
+      id: accountData.fullyQualifiedName,
+      gaia: accountData.profile && accountData.profile.api ? new URL(accountData.profile.api.gaiaHubUrl).hostname : "",
       bitcoin: bitcoin.identifier,
       ethereum: ethereum.identifier
     },
@@ -58,8 +67,13 @@ const schemaOne = (data) => {
   };
 };
 
-const schemaAll = (data) => {
-  return data.map(schemaOne);
+/**
+* @function schemaAll
+* @param {array} accountsData - account data objects to cast/scheme
+* @returns {array} returns array of account data objects schemed/casted in the manner @see {@link schemaOne}
+*/
+const schemaAll = (accountsData) => {
+  return accountsData.map(schemaOne);
 };
 
 const Schema = { one: schemaOne, all: schemaAll };

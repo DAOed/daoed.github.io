@@ -1,4 +1,15 @@
+/**
+* Quality module is for filtering and ranking search results based on how much profile meta data they have available
+* @module Quality
+*/
 
+/**
+* @function filterQuality
+* @param {array} data - account data objects to cast/scheme
+* @param {string} type - valid types are `quality` and `domain`
+* @param {(array|string)} config - when `type` is `quality` is `array` with values: `['name', 'bio', 'avatar', 'accounts']`, else is string of domain extensions to filter for `.id.blockstack/id.blockstack .id.onename`
+* @returns {array} returns array of account data objects filtered according to `type` and `config` params
+*/
 const filterQuality = (data, type, config) => {
   // console.log(data, type, config)
 
@@ -35,6 +46,11 @@ const filterQuality = (data, type, config) => {
   }
 };
 
+/**
+* @function rankQuality
+* @param {array} data - array of casted/schemed account data objects
+* @returns {array} returns array of casted/schemed account data objects ranked for based on whether has most or least of these: `avatar`, `name`, `bio`
+*/
 const rankQuality = function (data) {
   return data.sort(function (item1, item2) {
     const img1 = item1.profile.avatar || "";

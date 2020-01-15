@@ -30,7 +30,7 @@ While originally developed for use in *DAOed* dapps, other *BlockStack* dapps mi
 ## Contributing
 
 ### Set up
-* Clone this repo: `https://github.com/DAOed/daoed.github.io`
+* Clone the repo: `https://github.com/DAOed/daoed.github.io`
 * Change into the repo directory: `cd daoed`
 * Install deps: `yarn install`
 * Start dev server: `yarn start`
@@ -40,7 +40,7 @@ While originally developed for use in *DAOed* dapps, other *BlockStack* dapps mi
 * Upon receiving approval from any of *DAOed*'s members, follow the steps below
 
 ### Bug, issue or fix
-* Fork this repo: `https://github.com/DAOed/daoed.github.io`
+* Fork the repo: `https://github.com/DAOed/daoed.github.io`
 * Clone your fork locally
 * Create your feature/fix branch on your locally cloned repo
 * Commit changes to the feature/fix branch of your local repo

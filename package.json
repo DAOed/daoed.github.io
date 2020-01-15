@@ -1,19 +1,22 @@
 {
   "name": "daoed",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "BlockStack API helper library that works in browser, node and native",
   "main": "./dist/index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
-    "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose",
-    "docs": "./node_modules/.bin/jsdoc ./src  -d docs",
+    "docs": "./node_modules/.bin/jsdoc -t ./theme -c ./.jsdoc.json && npm run copydocs",
+    "copydocs": "node move",
     "pub": "npm version minor --force -m \"version %s\"",
     "patch": "npm version patch --force -m \"version %s\"",
     "preversion": "npm run docs",
     "version": "git add -A",
     "postversion": "npm publish && git push",
-    "lintfix": "./node_modules/.bin/eslint index.js src/ --fix"
+    "lintfix": "./node_modules/.bin/eslint index.js src/ --fix",
+    "ready": "npm run lintfix && npm run build && npm run docs",
+    "up:patch": "npm run ready && npm version patch --force -m \"version %s\" && git add -A && git push && npm publish",
+    "up:minor": "npm run ready && npm version minor --force -m \"version %s\" && git add -A && git push && npm publish"
   },
   "keywords": [
     "api",
@@ -36,8 +39,6 @@
     "cross-env": "^5.2.1",
     "css-loader": "^3.2.0",
     "cssnano": "^4.1.10",
-    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
-    "esdoc-standard-plugin": "^1.0.0",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-friendly-formatter": "^4.0.1",

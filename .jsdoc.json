@@ -6,42 +6,51 @@
   "source": {
     "include": ["src", "package.json", "README.md"],
     "includePattern": ".js$",
-    "excludePattern": "(node_modules/|docs|dist)"
+    "excludePattern": "(node_modules/|docs)"
   },
   "plugins": [
-    { "name": "esdoc-ecmascript-proposal-plugin", "option": { "all": true } },
-    {
-      "name": "esdoc-standard-plugin",
-      "option": {
-        "lint": {"enable": true},
-        "coverage": {"enable": true},
-        "accessor": {"access": ["public", "protected", "private"], "autoPrivate": true},
-        "undocumentIdentifier": {"enable": true},
-        "unexportedIdentifier": {"enable": false},
-        "typeInference": {"enable": true},
-        "brand": {
-          "logo": "./assets/images/daoed-wordmark.png",
-          "title": "Daoed helper library",
-          "description": "BlockStack API helper library that works in browser, node and native",
-          "repository": "https://github.com/DAOed/daoed.github.io",
-          "site": "https://daoed.github.io/",
-          "author": "https://about.daoed.com",
-          "image": "https://about.daoed.com/img/daoed-logo.png"
-        },
-      }
-    }
+    "plugins/markdown",
+    "./theme/plugins/short-symbolic-links",
+    "./theme/plugins/convert-atag-links-in-see-tag",
+    "./theme/plugins/copydoc-tag-def",
+    "./theme/plugins/copydoc-process",
+    "./theme/plugins/link-builtin-to-mdn",
+    "./theme/plugins/inherit-properties"
   ],
   "templates": {
-    "cleverLinks": false,
+    "cleverLinks": true,
     "monospaceLinks": true,
-    "useLongnameInNav": false,
-    "showInheritedInNav": true
+    "default": {
+      "outputSourceFiles": false,
+      "includeDate": false
+    },
+    "navType ": "inline",
+    "linenums": true,
+    "theme": "cerulean",
+    "copyright": "<a href='https://github.com/DAOed/daoed.github.io'>Daoed.js</a>",
+    "applicationName": "Daoed.js",
+    "disqus": "",
+    "googleAnalytics": "",
+    "openGraph": {
+      "title": "DAOed.js",
+      "type": "website",
+      "site_name": "Daoed.js",
+      "url": "https://github.com/DAOed/daoed.github.io"
+    },
+    "meta": {
+      "title": "Daoed.js",
+      "description": "",
+      "keyword": "blockstack, daoed, decentralization, blockchain"
+    },
+    "sourceLinks": true
   },
   "opts": {
-    "destination": "./docs",
+    "destination": "./docs-history",
     "encoding": "utf8",
     "private": true,
     "recurse": true,
-    "template": "./node_modules/minami"
+    "private": false,
+    "verbose": true,
+    "template": "./theme"
   }
 }

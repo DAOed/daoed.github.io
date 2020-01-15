@@ -10,7 +10,10 @@
 config.gypi
 CVS
 npm-debug.log
+move.js
 /docs
+/docs-history
 /public
 /src
 /config
+/theme
