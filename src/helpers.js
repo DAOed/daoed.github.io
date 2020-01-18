@@ -4,6 +4,7 @@
 */
 
 import axios from "axios";
+import * as Crypt from "hybrid-crypto-js";
 import { historySize, defaultAvatarColors, avatarSize } from "./constants";
 
 const client = {
@@ -26,6 +27,14 @@ const client = {
     }
   }
 };
+
+/**
+* @name Cryptor
+* @description Encryption and decryption library that works in node.js, browser and native(react-native)
+* @see {@link https://www.npmjs.com/package/react-native-aes-crypto} for usage
+* @todo Build helper functions out of this
+*/
+const Cryptor = Crypt;
 
 /**
 * @function addHistory
@@ -100,8 +109,8 @@ const initialsAvatar = (name, colors = defaultAvatarColors, size = avatarSize) =
   };
 };
 
-const Helpers = { client, addHistory, filer, initialsAvatar };
+const Helpers = { client, addHistory, filer, initialsAvatar, Cryptor };
 
 export {
-  Helpers as default, client, addHistory, filer, initialsAvatar
+  Helpers as default, client, addHistory, filer, initialsAvatar, Cryptor
 };
