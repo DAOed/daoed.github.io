@@ -7,6 +7,12 @@ import axios from "axios";
 import * as Crypt from "hybrid-crypto-js";
 import { historySize, defaultAvatarColors, avatarSize } from "./constants";
 
+/**
+* @function client
+* @description Wrapper for two `axios` library methods: `client.get(url)` and `client.post(url, params)`
+* @see {@link https://www.npmjs.com/package/axios} for usage
+* @returns {object} returns object from network request
+*/
 const client = {
   get: async (url) => {
     try {
