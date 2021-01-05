@@ -62,7 +62,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.8.0",
-    "axios": "^0.19.1",
+    "axios": "^0.21.1",
     "hybrid-crypto-js": "^0.2.2"
   },
   "repository": {
